@@ -18,6 +18,7 @@
 				<td>Preco</td>
 				<td>Descricao</td>
 				<td>Inicio das Vendas</td>
+				<td>Ação</td>
 			</tr>
 		<c:forEach var="produto" items="${produtoList}">
 			<tr>
@@ -26,6 +27,10 @@
 				<td>${produto.descricao}</td>
 				<td><fmt:formatDate pattern="dd/MM/yyyy"
 						value="${produto.dataInicioVenda.time}" /></td>
+				<td>
+				<a href="<c:url value="/produto/remove"/>?produto.id=${produto.id}">Remover</a>
+				<a href="<c:url value="/produto/edita"/>?id=${produto.id}">Alterar</a>
+				</td>
 			</tr>
 		</c:forEach>
 	</table>
