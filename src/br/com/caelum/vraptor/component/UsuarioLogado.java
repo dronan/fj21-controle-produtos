@@ -2,10 +2,10 @@ package br.com.caelum.vraptor.component;
 
 import br.com.caelum.vraptor.bean.Usuario;
 import br.com.caelum.vraptor.ioc.Component;
-import br.com.caelum.vraptor.ioc.RequestScoped;
+import br.com.caelum.vraptor.ioc.SessionScoped;
 
 @Component
-@RequestScoped
+@SessionScoped
 public class UsuarioLogado {
 
 	private Usuario usuarioLogado;
@@ -14,7 +14,7 @@ public class UsuarioLogado {
 		this.usuarioLogado = usuario;
 	}
 
-	public Usuario getUsuarioLogado() {
+	public Usuario getUsuario() {
 		return usuarioLogado;
 	}
 	

@@ -32,12 +32,12 @@ public class LoginInterceptor implements Interceptor {
 	@Override
 	public void intercept(InterceptorStack stack, ResourceMethod method,
 			Object instance) throws InterceptionException {
-		if (usuarioLogado.getUsuarioLogado() != null){
+		if (usuarioLogado.getUsuario() != null){
 			stack.next(method, instance);
 		}else{
 			result.redirectTo(LoginController.class).formulario();
 		}
 		
 	}
-	
 }
+

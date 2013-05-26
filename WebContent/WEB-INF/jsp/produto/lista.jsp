@@ -34,6 +34,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<p><a href="formulario">Adicionar</a></p>
 
 </body>
 </html>
