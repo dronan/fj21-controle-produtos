@@ -18,11 +18,10 @@ public class UsuarioDAO {
 		this.session = new HibernateUtil().getSession();
 	}
 
-	public Usuario buscaUsuarioPorLoginESenha(Usuario usuario) {
-		Query query = this.session
-				.createQuery("from Usuario where login = :pLogin and senha = :pSenha");
-		query.setParameter("pLogin", usuario.getLogin());
-		query.setParameter("pSenha", usuario.getSenha());
+	public Usuario buscaUsuarioPorLoginESenha(Usuario u) {
+		Query query = this.session.createQuery("From Usuario where login = :pLogin and senha = :pSenha");
+		query.setParameter("pLogin", u.getLogin());
+		query.setParameter("pSenha", u.getSenha());
 		return (Usuario) query.uniqueResult();
 	}
 

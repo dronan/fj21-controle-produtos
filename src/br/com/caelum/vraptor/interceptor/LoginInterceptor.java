@@ -1,5 +1,7 @@
 package br.com.caelum.vraptor.interceptor;
 
+
+
 import br.com.caelum.vraptor.InterceptionException;
 import br.com.caelum.vraptor.Intercepts;
 import br.com.caelum.vraptor.Result;

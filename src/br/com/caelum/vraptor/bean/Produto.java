@@ -16,7 +16,7 @@ public class Produto {
 	private Long id;
 
 	private String nome;
-	
+
 	public String getDescricao() {
 		return descricao;
 	}

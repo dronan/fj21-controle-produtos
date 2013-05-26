@@ -23,10 +23,15 @@ public class LoginController {
 	public void autentica(Usuario usuario) {
 		Usuario autenticado = usuarioDao.buscaUsuarioPorLoginESenha(usuario);
 		if (autenticado != null) {
+			
 			usuarioLogado.efetuaLogin(autenticado);
 			result.redirectTo(ProdutoController.class).lista();
+			System.out.println("Direcionamento para produtocontroller");
+			return;
+			
 		}
 		result.redirectTo(LoginController.class).formulario();
+
 	}
 
 	public void formulario() {
