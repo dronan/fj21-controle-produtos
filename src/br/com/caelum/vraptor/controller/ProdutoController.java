@@ -33,7 +33,7 @@ public class ProdutoController {
 
 	public void remove(Produto produto){
 		dao.remove(produto);
-		result.redirectTo(ProdutoController.class).lista();
+		//result.redirectTo(ProdutoController.class).lista();
 	}
 	
 	public Produto edita(Long id){
